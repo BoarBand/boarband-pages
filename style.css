@@ -1,0 +1,58 @@
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --text: #24211c;
+  --muted: #6b645a;
+  --accent: #b8621b;
+  --border: #e4ded3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17150f;
+    --surface: #211e17;
+    --text: #ece6da;
+    --muted: #a79f92;
+    --accent: #e58f45;
+    --border: #3a352b;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0 16px;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main {
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 32px clamp(20px, 5vw, 48px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 8px; }
+h1 { margin: 0 0 4px; font-size: 1.9rem; line-height: 1.2; }
+.subtitle { margin: 0; color: var(--muted); }
+h2 { margin: 32px 0 8px; font-size: 1.25rem; }
+h3 { margin: 20px 0 4px; font-size: 1.05rem; }
+p, ul { margin: 8px 0; }
+ul { padding-left: 1.3em; }
+li { margin: 4px 0; }
+a { color: var(--accent); overflow-wrap: anywhere; }
+.table-wrap { overflow-x: auto; margin: 12px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: 600; }
+footer { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+
+/* Catalog page */
+.back { display: inline-block; margin-bottom: 12px; font-size: 0.9rem; text-decoration: none; }
+.games { list-style: none; padding: 0; margin: 16px 0 0; }
+.games li { margin: 0; border-bottom: 1px solid var(--border); }
+.games li:last-child { border-bottom: 0; }
+.games a { display: flex; justify-content: space-between; gap: 12px; padding: 14px 4px; text-decoration: none; color: var(--text); }
+.games a:hover .game-name { color: var(--accent); }
+.game-name { font-weight: 600; }
+.game-link { color: var(--muted); font-size: 0.9rem; }
